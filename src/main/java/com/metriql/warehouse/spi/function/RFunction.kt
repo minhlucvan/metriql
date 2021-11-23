@@ -52,6 +52,14 @@ enum class RFunction(val description: String?, val returnType: FieldType, val pa
         )
     ),
 
+    DATE_TRUNC(
+        "Truncate to specified precision.", STRING,
+        listOf(
+            "text" to listOf(STRING),
+            "timestamp" to listOf(TIMESTAMP),
+        )
+    ),
+
     TO_ISO8601(
         "Format as an ISO 8601 string. The parameter can be date or timestamp",
         STRING,

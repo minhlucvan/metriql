@@ -72,6 +72,7 @@ abstract class ANSISQLMetriqlBridge : WarehouseMetriqlBridge {
         RFunction.FLOOR to "FLOOR({{value[0]}})",
         RFunction.ROUND to "FLOOR({{value[0]}})",
         RFunction.VERSION to "'${stripLiteral(trinoVersion)}' as _col1",
+        RFunction.DATE_TRUNC to "DATE_TRUNC({{value[0]}}, {{value[1]}})",
     )
 
     override val supportedDBTTypes: Set<DBTType> = setOf()
